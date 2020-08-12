@@ -1,0 +1,54 @@
+{
+    "name": "codicastudio/responsecache",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/response-cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codica.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "laravel/framework": "^7.24",
+        "nesbot/carbon": "^2.35"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^9.1.5",
+        "orchestra/testbench": "^5.2",
+        "mockery/mockery": "^1.4",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "codicastudio\\responsecache\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "codicastudio\\responsecache\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\responsecache\\ResponseCacheServiceProvider"
+            ],
+            "aliases": {
+                "ResponseCache": "codicastudio\\responsecache\\Facades\\ResponseCache"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
