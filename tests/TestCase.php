@@ -85,7 +85,7 @@ abstract class TestCase extends Orchestra
             User::create(
                 [
                     'name' => "user{$index}",
-                    'email' => "user{$index}@spatie.be",
+                    'email' => "user{$index}@codicastudiodev",
                     'password' => "password{$index}",
                 ]
             );

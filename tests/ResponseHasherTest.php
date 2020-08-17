@@ -21,7 +21,7 @@ class ResponseHasherTest extends TestCase
 
         $this->cacheProfile = Mockery::mock(CacheProfile::class);
 
-        $this->request = Request::create('https://spatie.be');
+        $this->request = Request::create('https://codicastudiodev');
 
         $this->requestHasher = new DefaultHasher($this->cacheProfile);
     }
@@ -40,8 +40,8 @@ class ResponseHasherTest extends TestCase
     {
         $this->cacheProfile->shouldReceive('useCacheNameSuffix')->andReturn('cacheProfileSuffix');
 
-        $request = Request::create('https://spatie.be/example-page');
-        $requestForSubdomain = Request::create('https://de.spatie.be/example-page');
+        $request = Request::create('https://codicastudiodev/example-page');
+        $requestForSubdomain = Request::create('https://de.codicastudiodev/example-page');
 
         $this->assertNotEquals($this->requestHasher->getHashFor($request),
             $this->requestHasher->getHashFor($requestForSubdomain));
